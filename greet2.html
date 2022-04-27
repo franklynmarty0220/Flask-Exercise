@@ -1,0 +1,15 @@
+{% enxtends 'base.html' %}
+{% block content %}
+{%block title%} Greeter V2 {% endblock %}
+    <h1>Hi there, {{username}}!ß</h1>
+    {% if wants_compliments%}
+        <h2>Ok here is a compliment!</h2>
+        <ul>
+            {% for compliment in compliments%}
+            
+                <li>{{compliment}}</li>
+        </ul>
+            {% endfor%}
+    {% endif %}
+
+{% endblock %}
