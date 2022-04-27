@@ -3,10 +3,13 @@ from flask import Flask, request, render_template, redirect
 from flask_debugtoolbar import DebugToolbarExtension
 from random import randint, choice, sample
 
+
 app = Flask(__name__)
-app.config['Secret_Key'] = "chickens"
+app.config['SECRET_KEY'] = "chickens"
+
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 debug = DebugToolbarExtension(app)
+
 
 @app.route('/root')
 def homepage():
